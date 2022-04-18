@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: siyuanheiti;
+  src: url('../font/思源黑体-Normal.otf') format('opentype'),
+    url('../font/思源黑体-Normal.woff') format('woff'),
+    url('../font/思源黑体-Normal.ttf') format('truetype');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+}
+body {
+  font-family: siyuanheiti;
+}
+:root {
+  --themeColor: #66a8ff;
+  --themeBg: #fafafc;
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .scrollbar-vertical::-webkit-scrollbar-track {
+    background: transparent;
+    width: 5px;
+  }
+  .scrollbar-vertical::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px;
+  }
+  .scrollbar-vertical::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-horizontal::-webkit-scrollbar-track {
+    background: transparent;
+    height: 5px;
+  }
+  .scrollbar-horizontal::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px;
+  }
+  .scrollbar-horizontal::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-hidden::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+  .scrollbar-hidden::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .grid-center {
+    @apply grid place-items-center;
+  }
+  .delta-up {
+    @apply border-5 border-transparent h-0 border-t-6 border-b-6;
+    border-bottom-color: currentColor;
+  }
+  .delta-down {
+    @apply border-5 border-transparent h-0 border-t-6 border-b-6;
+    border-top-color: currentColor;
+  }
+}
+
+.tag {
+  @apply pr-2 py-1 md:pr-4 md:py-2 lg:py-3;
+}
+:root::-webkit-scrollbar-track {
+  background: transparent;
+  height: 5px;
+}
+:root::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+:root::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
